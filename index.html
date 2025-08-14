@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hidden - Speakeasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              "speakeasy-dark": "#1a1a1a",
+              "speakeasy-gray": "#f5f5f5",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter bg-white text-black">
+    <header class="sr-only">
+      <h1>The Hidden - Speakeasy</h1>
+    </header>
+
+    <main>
+      <section class="min-h-screen flex flex-col px-8 py-8">
+        <!-- start of header section -->
+        <div class="flex flex-col mx-auto w-full">
+          <h2
+            class="hero-title text-left font-black uppercase leading-none tracking-tight mb-4"
+          >
+            AN INVITATION<br />TO THE HIDDEN
+          </h2>
+
+          <figure class="w-full">
+            <div
+              class="relative w-full fade-in-up"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="w-full h-[500px] overflow-hidden bg-speakeasy-gray shadow-2xl cursor-pointer image-hover"
+                onclick="openModal('./assets/fabrizio-conti-m5fHSKYSflI-unsplash.jpg')"
+              >
+                <img
+                  loading="lazy"
+                  src="./assets/fabrizio-conti-m5fHSKYSflI-unsplash.jpg"
+                  alt="Speakeasy ambiance"
+                  class="w-full h-full object-cover opacity-70"
+                />
+              </div>
+            </div>
+          </figure>
+
+          <article
+            class="flex flex-col lg:flex-row gap-x-12 w-full mt-8 fade-in-up"
+          >
+            <div class="grid grid-cols-2 gap-6 lg:gap-8 mb-8">
+              <div class="space-y-2">
+                <p
+                  class="text-xs sm:text-sm uppercase tracking-wide text-gray-600 font-medium"
+                >
+                  Curated Selection Of
+                </p>
+                <p class="text-lg sm:text-xl font-bold">Fine Spirits</p>
+              </div>
+              <div class="space-y-2">
+                <p
+                  class="text-xs sm:text-sm uppercase tracking-wide text-gray-600 font-medium"
+                >
+                  A Hidden Gem
+                </p>
+                <p class="text-lg sm:text-xl font-bold">7 Nights / Week</p>
+              </div>
+            </div>
+
+            <p
+              class="max-w-3xl text-sm sm:text-base text-gray-600 leading-relaxed"
+            >
+              Step into a place where time slows down and the night feels
+              endless. Our speakeasy offers a unique, intimate atmosphere,
+              perfect for those seeking something more than the usual. Come for
+              the experience, stay for the vibe.
+            </p>
+          </article>
+        </div>
+        <!-- end of header section -->
+      </section>
+
+      <section class="px-8 py-12">
+        <!-- start of gallery section -->
+        <div class="mx-auto">
+          <div class="text-center mb-12 lg:mb-16 fade-in-up">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase">
+              Behind
+            </h2>
+            <p class="text-sm font-black sm:text-base tracking-wider mb-6">
+              Closed Doors
+            </p>
+            <p class="max-w-[680px] mx-auto text-sm sm:text-base text-gray-600">
+              Our speakeasy offers an atmosphere that's both silent and relaxed,
+              perfect for those who appreciate the finer things in life. Whether
+              you're here for a quiet drink or to linger into the night, every
+              moment feels exclusive.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
+          >
+            <template id="gallery-template"></template>
+
+            <div
+              class="aspect-square overflow-hidden bg-black rounded cursor-pointer image-hover fade-in-up"
+              style="animation-delay: 0.1s"
+              onclick="openModal('./assets/annie-spratt-2kIfhlykiN8-unsplash.jpg')"
+            >
+              <img
+                loading="lazy"
+                src="./assets/annie-spratt-2kIfhlykiN8-unsplash.jpg"
+                alt="Dark spheres decor"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="aspect-square overflow-hidden bg-speakeasy-gray rounded cursor-pointer image-hover fade-in-up"
+              style="animation-delay: 0.2s"
+              onclick="openModal('./assets/dylann-hendricks-2K4LmjU7TLs-unsplash.jpg')"
+            >
+              <img
+                loading="lazy"
+                src="./assets/dylann-hendricks-2K4LmjU7TLs-unsplash.jpg"
+                alt="Wine bottles on shelf"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="aspect-square overflow-hidden bg-black rounded cursor-pointer image-hover fade-in-up"
+              style="animation-delay: 0.3s"
+              onclick="openModal('./assets/fabrizio-conti-m5fHSKYSflI-unsplash.jpg')"
+            >
+              <img
+                loading="lazy"
+                src="./assets/fabrizio-conti-m5fHSKYSflI-unsplash.jpg"
+                alt="Wine glasses on a bar"
+                class="w-full h-full object-cover opacity-80"
+              />
+            </div>
+
+            <div
+              class="aspect-square overflow-hidden bg-black rounded cursor-pointer image-hover fade-in-up"
+              style="animation-delay: 0.4s"
+              onclick="openModal('./assets/mick-nsenga-50XwniKxiXI-unsplash.jpg')"
+            >
+              <img
+                loading="lazy"
+                src="./assets/mick-nsenga-50XwniKxiXI-unsplash.jpg"
+                alt="Mountain landscape view"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="aspect-square overflow-hidden bg-black rounded cursor-pointer image-hover fade-in-up"
+              style="animation-delay: 0.5s"
+              onclick="openModal('./assets/satwik-gawand-fp4qacQaNjY-unsplash.jpg')"
+            >
+              <img
+                loading="lazy"
+                src="./assets/satwik-gawand-fp4qacQaNjY-unsplash.jpg"
+                alt="Neon cocktails sign"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div
+              class="aspect-square overflow-hidden bg-speakeasy-gray rounded cursor-pointer image-hover fade-in-up"
+              style="animation-delay: 0.6s"
+              onclick="openModal('./assets/the-blowup-LWJrUUtAUVY-unsplash.jpg')"
+            >
+              <img
+                loading="lazy"
+                src="./assets/the-blowup-LWJrUUtAUVY-unsplash.jpg"
+                alt="Dark abstract design"
+                class="w-full h-full object-cover opacity-80"
+              />
+            </div>
+          </div>
+
+          <div class="text-center mt-12 lg:mt-16">
+            <button
+              class="bg-black text-white px-8 py-3 text-sm uppercase tracking-wider font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
+            >
+              Guestlist
+            </button>
+          </div>
+        </div>
+        <!-- end of gallery section -->
+      </section>
+    </main>
+
+    <!-- open modal view -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black bg-opacity-80 modal hidden items-center justify-center z-50 p-4"
+      tabindex="-1"
+    >
+      <div class="relative max-w-4xl max-h-full modal-content">
+        <img
+          id="modalImage"
+          src=""
+          alt="Modal Image"
+          class="max-w-full max-h-full object-contain rounded"
+        />
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+    <!-- open modal view -->
+
+    <!-- scroll to top -->
+    <button
+      id="scrollToTop"
+      class="scroll-to-top fixed bottom-8 right-8 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-colors z-40"
+      aria-label="Scroll to top"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </button>
+    <!-- scroll to top -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
