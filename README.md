@@ -25,9 +25,8 @@ Created as part of a technical challenge for a frontend developer position.
 
 ## 📂 Project Structure
 
-/root
-
+- /root
 - ├── index.html # Main HTML file
 - ├── style.css # Custom CSS animations & styles
 - ├── script.js # JavaScript for modal, scroll button, animations
-- └-── assets/ # Images
+- └── assets/ # Images
