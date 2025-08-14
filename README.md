@@ -5,7 +5,7 @@ Created as part of a technical challenge for a frontend developer position.
 
 ## 🚀 Live Preview
 
-[View Live Site](https://the-hidden-speakeasy.netlify.app) <!-- Ganti dengan URL Netlify/Vercel kamu -->
+[View Live Site](https://the-hidden-speakeasy.vercel.app)
 
 ## 📌 Features
 
